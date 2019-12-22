@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div>
+      黑马头条后台管理系统欢迎你！
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 
 </style>

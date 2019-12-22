@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div class="usermsg">
+      用户
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 
 </style>
