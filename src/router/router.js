@@ -8,6 +8,7 @@ import Index from '@/views/Index.vue'
 // 引入子组件
 import Welcome from '@/components/hl_back_Welcome.vue'
 import Article from '@/components/hl_back_Article.vue'
+import Publish from '@/views/publish.vue'
 // 挂载
 Vue.use(VueRouter)
 
@@ -34,6 +35,11 @@ let router = new VueRouter({
         name: 'article',
         path: 'article',
         component: Article
+      },
+      {
+        name: 'publish',
+        path: 'publish',
+        component: Publish
       }
     ]
   }
@@ -43,7 +49,7 @@ let router = new VueRouter({
 // 在路由中添加导航守卫
 router.beforeEach((to, from, next) => {
   // 如果是不需要的就直接next
-  if (to.path === 'login') {
+  if (to.path === '/login') {
     next()
   } else {
     // 判断用户是否已经登录，如果没有登录，应该跳转到登录页面

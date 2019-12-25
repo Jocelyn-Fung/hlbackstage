@@ -37,7 +37,7 @@
                      <span>文章列表</span>
                     </template>
                 </el-menu-item>
-                <el-menu-item index="2-2">
+                <el-menu-item index="publish">
                     <template slot="title">
                     <i class="el-icon-location"></i>
                      <span>文章分布</span>
@@ -67,7 +67,7 @@
             <div class="middle system-title" >黑马头条后台管理系统</div>
             <div class="right">
                 <span>欢迎你：Josie</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span>退出</span>
+                <span @click="logout" class="logout">退出</span>
             </div>
         </el-header>
         <el-main>
@@ -79,7 +79,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    logout () {
+      this.$router.push({ name: 'login' })
+      localStorage.removeItem('hl_back_token')
+    }
+  }
+}
 </script>
 
 <style lang='less' scoped>
@@ -128,6 +135,9 @@ export default {}
   }
   .welcome{
     color: white;
+  }
+  .logout{
+    cursor: pointer;
   }
 }
 

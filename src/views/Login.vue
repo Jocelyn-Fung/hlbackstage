@@ -49,8 +49,8 @@ export default {
           let res = await userLogin(this.loginForm)
           // console.log(res)
           if (res.data.message === '登录成功') {
-            localStorage.setItem('hl_back_token', res.data.data.token)
             this.$router.push({ path: '/' })
+            localStorage.setItem('hl_back_token', res.data.data.token)
           }
         } else {
           this.$message.error('数据输入不合法，请重新输入')
